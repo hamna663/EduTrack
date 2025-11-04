@@ -1,5 +1,5 @@
 """
-WSGI config for LearnLytics project.
+WSGI config for EduTrack project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'LearnLytics.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'EduTrack.settings')
 
 application = get_wsgi_application()
