@@ -11,6 +11,7 @@
     --color-red-200: oklch(88.5% 0.062 18.334);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-black: #000;
+    --spacing: 0.25rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-5xl: 3rem;
@@ -204,6 +205,9 @@
       max-width: 96rem;
     }
   }
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -222,11 +226,18 @@
   .justify-center {
     justify-content: center;
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
   .bg-red-200 {
     background-color: var(--color-red-200);
+  }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
   }
   .font-serif {
     font-family: var(--font-serif);
@@ -255,6 +266,11 @@
     color: var(--color-black);
   }
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -270,6 +286,7 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
